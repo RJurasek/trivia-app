@@ -136,6 +136,12 @@ form select{
     border-radius: 7px;
 }
 
+.score-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 hr{
     margin-top: 2em;
 }
@@ -143,6 +149,7 @@ hr{
 @media (min-width: 720px){
     .answer{
         min-width: 10%;
+        max-width: 200px;
         font-size: 1em;
     }
     .question{

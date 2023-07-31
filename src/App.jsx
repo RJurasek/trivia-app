@@ -12,7 +12,11 @@ export default function App(){
     })
 
     function startQuiz(){
-        setIsStarted(true)
+        if(formData.numOfQuestions === "" || formData.difficulty === ""){
+            alert("Please select options")
+        } else {
+            setIsStarted(true)
+        }
     }
 
     function handleChange(event){

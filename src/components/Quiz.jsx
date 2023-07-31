@@ -86,10 +86,13 @@ export default function Quiz(props){
 
     return (
         <div className="questions">
-            {isSubmitted && <p>You answered {correctAnswerCount}/{questions.length} correct</p>}
             {questionElements}
             {!isSubmitted ? <button onClick={checkAnswers} className="btn">Check answers</button>
-             : <button onClick={newGame} className="btn"> Play Again</button>}
+             :  <div className="score-container"> 
+                    <h3>You answered {correctAnswerCount}/{questions.length} correct</h3>
+                    <button onClick={newGame} className="btn"> Play Again</button>
+                </div>
+            }
         </div>
     )
 }
